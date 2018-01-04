@@ -22,7 +22,7 @@ response = requests.get(BASE_URL)
 
 try:
     response.raise_for_status()
-except HTTPError:
+except requests.HTTPError:
     print('request returned {}: {}'.format(response.status_code, response.url))
     sys.exit(1)
 
